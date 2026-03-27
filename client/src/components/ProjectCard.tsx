@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 import { EllipsisIcon, ImageIcon, Loader2Icon, PlaySquareIcon, Share2Icon, Trash2Icon } from "lucide-react";
 import { button } from "framer-motion/client";
+import { GhostButton, PrimaryButton } from "./Buttons";
 
 
 const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
@@ -89,7 +90,11 @@ const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
                   </button>}
 
                   <button onClick={()=> handleDelete(gen.id)} className="w-full flex gap-2 items-center px-4 py-2 hover:bg-red-950/10 text-red-400 cursor-pointer">
+<<<<<<< HEAD
                     <Trash2Icon size={14} /> Delete
+=======
+                    <Trash2Icon size={14}/> Delete
+>>>>>>> 44bbf37 (Added Authentication)
                 </button>
 
                 </ul>
@@ -135,6 +140,21 @@ const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
               <div className="text-xs text-gray-300">{gen.userPrompt}</div>
             </div>
           )}
+<<<<<<< HEAD
+=======
+
+          {/* buttons */}
+          {forCommunity && (
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <GhostButton className="text-xs justify-center" onClick={()=> {navigate(`/result/${gen.id}`); scrollTo(0,0)}}>
+                View Details
+              </GhostButton>
+              <PrimaryButton onClick={()=> togglePublish(gen.id)} className="rounded-md">
+                {gen.isPublished ? 'Unpublish' : 'Publish'}
+              </PrimaryButton>
+            </div>
+          )}
+>>>>>>> 44bbf37 (Added Authentication)
         </div>
       </div>
     </div>
