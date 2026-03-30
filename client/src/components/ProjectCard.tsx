@@ -90,11 +90,11 @@ const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
                   </button>}
 
                   <button onClick={()=> handleDelete(gen.id)} className="w-full flex gap-2 items-center px-4 py-2 hover:bg-red-950/10 text-red-400 cursor-pointer">
-<<<<<<< HEAD
+
                     <Trash2Icon size={14} /> Delete
-=======
+
                     <Trash2Icon size={14}/> Delete
->>>>>>> 44bbf37 (Added Authentication)
+
                 </button>
 
                 </ul>
@@ -140,8 +140,7 @@ const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
               <div className="text-xs text-gray-300">{gen.userPrompt}</div>
             </div>
           )}
-<<<<<<< HEAD
-=======
+
 
           {/* buttons */}
           {forCommunity && (
@@ -154,7 +153,7 @@ const ProjectCard = ({ gen, setGenerations, forCommunity = false }:
               </PrimaryButton>
             </div>
           )}
->>>>>>> 44bbf37 (Added Authentication)
+
         </div>
       </div>
     </div>

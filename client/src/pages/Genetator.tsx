@@ -3,6 +3,8 @@ import Title from "../components/Title"
 import UploadZone from "../components/uploadZone"
 import { Loader2, Loader2Icon, RectangleHorizontalIcon, RectangleVerticalIcon, Wand2Icon } from "lucide-react"
 import { PrimaryButton } from "../components/Buttons"
+import { motion } from "framer-motion";
+
 
 
 
@@ -30,7 +32,12 @@ const Genetator = () => {
 
 
   return (
-    <div className="min-h-screen text-white p-6 md:p-12 mt-28">
+    <motion.div
+      className="min-h-screen text-white p-6 md:p-12 mt-28"
+      initial={{ opacity: 0, y: -60, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <form onSubmit={handleGenerate} className="max-w-4xl mx-auto mb-40">
         <Title
           heading="Create In-Context Image"
@@ -133,22 +140,25 @@ const Genetator = () => {
               />
             </div>
           </div>
-              </div>
-              <div className="flex justify-center mt-10">
-                  <PrimaryButton disabled={isGenerating} className="px-10 py-3 rounded-md disabled:opacity-70 disabled:cursor-not-allowed">
-                      {isGenerating ? (
-                          <>
-                          <Loader2Icon className="size-5 animate-spin"/> Generating...
-                          </>
-                      ) : (
-                          <>
-                            <Wand2Icon className="size-5"/> Generate Image
-                          </>
-                      )}
-                  </PrimaryButton>
-              </div>
+        </div>
+        <div className="flex justify-center mt-10">
+          <PrimaryButton
+            disabled={isGenerating}
+            className="px-10 py-3 rounded-md disabled:opacity-70 disabled:cursor-not-allowed"
+          >
+            {isGenerating ? (
+              <>
+                <Loader2Icon className="size-5 animate-spin" /> Generating...
+              </>
+            ) : (
+              <>
+                <Wand2Icon className="size-5" /> Generate Image
+              </>
+            )}
+          </PrimaryButton>
+        </div>
       </form>
-    </div>
+    </motion.div>
   );
 }
 
