@@ -24,7 +24,7 @@ Welcome to the **UGC.AI** repository! This is an advanced AI-powered video gener
 - **Framework:** [Express.js](https://expressjs.com/)
 - **Database:** PostgreSQL (with [Prisma](https://www.prisma.io/) ORM)
 - **Cloud Storage:** Cloudinary
-- **AI Integrations:** Google GenAI SDK, Magic Hour API
+- **AI Integrations:** Groq, Magic Hour API and LightX
 - **Media Processing:** FFmpeg (`fluent-ffmpeg`, `ffmpeg-static`)
 
 ## 📦 Project Structure
@@ -39,7 +39,7 @@ The repository is organized into a monorepo-style structure:
 ### Prerequisites
 - Node.js (v18+)
 - PostgreSQL Database
-- API Keys for Clerk, Cloudinary, Google GenAI, and Magic Hour.
+- API Keys for Clerk, Cloudinary, LightX, and Magic Hour.
 
 ### Installation
 
