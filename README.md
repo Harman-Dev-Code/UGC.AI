@@ -4,7 +4,7 @@ Welcome to the **UGC.AI** repository! This is an advanced AI-powered video gener
 
 ## 🚀 Features
 
-- **Automated Video Generation:** Leverage powerful AI APIs (Google GenAI, Magic Hour) to automatically generate compelling video content.
+- **Automated Video Generation:** Leverage powerful AI APIs (LightX, Magic Hour) to automatically generate compelling video content.
 - **Subscription Tiers:** Integrated credit-based feature gating (Free, Pro, Premium) to manage usage and offer premium features.
 - **Secure Authentication:** User authentication and management is handled seamlessly with [Clerk](https://clerk.com/).
 - **Media Processing & Storage:** Robust file handling using Cloudinary for image/video hosting and `fluent-ffmpeg` for advanced media processing.
